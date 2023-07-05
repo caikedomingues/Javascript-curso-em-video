@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" 
+        content="width=device-width, initial-scale 1.0">
+        <meta http equiv="X-UA compatible" content="ie-edge">
+        <title>Meu programa</title>
+        <style>
+            body{
+                background-color:rgb(68, 125, 199);
+                color: white;
+                font: normal 18pt arial;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>Iniciando os estudos com Dom</h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>Dom</strong> em JavaScript</p>
+        <div id="msg">Clique em mim</div>
+        <div name="div2">Olá Mundo</div>
+        <div class="estou">Estou aqui!!</div>
+
+        <script>
+
+                                  //Método DOM//
+            /*Por marca
+            vamos selecionar um elemento do nosso código através do método
+            getElementsByTagName
+            Vale lembrar que, a contagem das linhas começam com 0, caso
+            queira selecionar todos os paragrafos, basta não colocar uma 
+            posição especifica, deixando apenas o nome da tag.
+
+            write: Escrever na tela
+            innerText: texto que está dentro da tag
+            */
+
+            var p1 = window.document.getElementsByTagName("p") [1]
+            window.document.write("Está escrito assim " + p1.innerText)
+
+            /*Também podemos fazer alterações na formatação do conteúdo
+            da tag */
+
+            p1.style.color="yellow"
+
+            //Vamos alterar a tag body usando o mesmo comando
+
+            var corpo = window.document.body
+
+            corpo.style.background="black"
+
+            /*innerHTML: Além de reproduzir o conteudo da tag, ele também
+            executa a formatação definida dentro da tag, por exemplo:
+            a tag p1 tem a palavra dom em negrito, caso eu use apenas o
+            innerText, a palavra DOM não estará em negrito*/
+
+            document.write(p1.innerHTML)
+            window.alert(p1.innerText)
+            /*Caso coloque p1.innerHTML ele vai mostrar a tag no
+            prompt de alerta, ou seja, não é uma boa prática*/
+            
+            /*Também podemos acessar uma tag através do id,
+            no caso, escrevemos apenas Element no singular, já que temos
+            apenas uma div*/
+
+            var d = window.document.getElementById("msg")
+            d.style.background="green"
+
+            /*Através da dom também podemos mudar o conteúdo da tag*/
+            d.innerText="Estou aguardando..."
+
+            /*Se quiser podemos escrever o comando inteiro, sendo ele:
+            window.document.getElementById("msg").innerText = "Olá"*/
+
+            /*Também podemos alterar  por nome*/
+            var e = window.document.getElementsByName('div2' )
+
+            /*Outra maneira eficiente de selecionar é através do query
+            selector*/
+            var f = window.document.querySelector('div.estou')
+            f.style.color="blue" 
+        </script>
+
+
+    </body>
+</html>

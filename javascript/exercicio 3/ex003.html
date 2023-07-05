@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="vviewport"
+        content="width=device-width, initial-scale 1.0">
+        <title>Meu primeiro programa</title>
+        <style>
+            body{
+                background-color: rgb(126, 126, 201);
+                color: white;
+                font: normal 20pt arial;
+                /*Isso é um comentário em css */
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Olá mundo</h1><!--isso é um comentário em html-->
+        <p>Me livrei da maldição!!</p>
+
+        <script>
+
+            var n1 = Number.parseInt(window.prompt("Digite um número"))
+            var n2 = Number.parseInt(window.prompt("Digite outro número"))
+
+            var s = n1 + n2
+
+            window.alert("A soma dos valores é " + s)
+
+            /* Também podemos fazer da maneira utilizando o placeholder
+            window.alert('A soma entre ${n1} e ${n2} é igual ${s}*/
+            
+           
+
+            //(number + number) para adição
+            //(string + string) para concatenação
+            /*Utilizamos o método number.parseInt para converter 
+            o tipo da variável, tornando ela do tipo inteiro.
+              Eu também poderia utilizar number.parseFloat para
+              números reais ou flutuantes.*/
+
+              /*Atualmente, temos a opção de utilizar apenas o number,
+              entretanto, se quisermos trabalhar especificamente com 
+              valores inteiros ou reais, devemos utilizar os métodos acima
+              que estão presentes nos comentários e nos códigos.
+                Vale lembrar que se colocarmos apenas o number, estaremos
+                trabalhando com os 2 tipos de números.*/
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale 1.0">
+        <meta http-equiv="X-UA compatible" content="ie-edge">
+        <title>Eventos DOM</title>
+        <style>
+            div#area{
+                font: normal 20pt arial;
+                background-color: rgb(42, 139, 42);
+                color: white;
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+            Interaja
+        </div>
+
+        <script>
+            /*Basicamente as funções só seram executas se o usuário
+            realizar algum tipo de ação, ou seja, a execução não é 
+            automática e sim condicional.*/
+
+            /*Caso queira deixar o seu html mais limpo é possivel 
+            declarar os métodos dentro da tag script, basta:
+        
+        
+            area.addEventListener('click', clicar)
+            area.addEventListener('mouseenter', entrar)
+            area.addEventListener('mouseout', sair)
+            */
+        
+
+
+            function clicar() {
+                var area = window.document.getElementById('area')
+                area.innerText = "Clicou"
+                area.style.background = 'red'
+            }
+
+            function entrar() {
+                var area = window.document.getElementById('area')
+                area.innerText = "Entrou"
+
+            }
+
+            function sair() {
+                var area = window.document.getElementById('area')
+                area.innerText = "Saiu"
+                area.style.background = 'green'
+            }
+        </script>
+
+    </body>
+</html>

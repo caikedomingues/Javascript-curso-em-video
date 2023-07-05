@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale">
+        <meta http-equiv="X-UA compatible" content="ie-edge">
+        <link rel="stylesheet" href="estilo/estilo.css">
+        <title>Verificador de idade</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Verificador de idade</h1>
+        </header>
+
+        <section>
+            <div>
+                <p>Ano de nascimento: 
+                    <input type="number" name="txtano" id="txtano" min="0">
+                </p>
+
+                <p>Sexo:
+                    <input type="radio" name="radsex" id="mas" checked>
+                    <label for="mas">Masculino</label>
+
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem">Feminino</label>
+
+                </p>
+
+                <p>
+                    <input type="button" value="verificar" onclick="verificar()">
+                    <!--Vamos criar aqui a função, pois esse input é o nosso botão,
+                    sendo assim, será ele que ira executar a função do programa
+                    que é verificar a idade-->
+                </p>
+
+
+            </div>
+
+            <div id="res">
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; CursoemVideo</p>
+        </footer>
+
+        <script src="js/javascript.js"></script>
+    </body>
+</html>

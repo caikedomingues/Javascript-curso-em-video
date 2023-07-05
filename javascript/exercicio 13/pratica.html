@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale 1.0">
+        <meta http-equiv="X-UA compatible" content="ie-edge">
+        <title>Nacionalidade</title>
+    </head>
+    <body>
+        <h1>Conferindo a nacionalidade</h1>
+        Escreva o nome do seu pais: <input type="text" name="txtp" id="txtp">
+        <input type="button" value="Verificar" onclick="conferir()" id="botao">
+        <div id="res">
+
+        </div>
+        <script>
+            function conferir(){
+
+                var txtp = window.document.getElementById('txtp')
+                var res = window.document.getElementById('res')
+                var pais = "Brasil"
+
+                switch(txtp){
+                    case 0: txtp == pais
+                    res.innerText="Você é brasileiro"
+                    break
+
+                    case 1: txtp != pais
+                    res.innerText="Você é um clandestino" 
+                    break
+                }
+
+            }
+          
+        </script>
+    </body>
+    </html>

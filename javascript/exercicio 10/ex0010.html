@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var txtvel = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtvel.value)// Irá converter de string para numero
+            res.innerHTML = `Sua Velocidade é de ${vel} km/h<br>`
+            res.innerHTML += `Dirija sempre com o cinto de segurança!<br>`
+            //+= serve para concatenar, agora vamos criar um if
+
+            if(vel > 60){
+                res.innerHTML += "Você ultrapassou o limite de velocidade. <strong>MULTADO!</strong>"
+                /*Caso você deixe só o igual, ele ira ocultar as outras mensagens
+                na hora da execução do if*/
+
+            }
+
+
+
+        }
+    </script>
+    
+</body>
+</html>
